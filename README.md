@@ -144,7 +144,12 @@ nested arrays and hashes (the Ruby equivalent of a JavaScript object):
 
 ```rb
 # app.rb
-pp [{ id: 1, hello: "World" }, { id: 2, hello: "Ruby" }, { id: 3, hello: "Moon" }, { id: 4, hello: "Learner" }]
+pp [
+     { id: 1, hello: "World" },
+     { id: 2, hello: "Ruby" },
+     { id: 3, hello: "Moon" },
+     { id: 4, hello: "Learner" }
+   ]
 ```
 
 The `pp` method will "pretty-print" these objects by calling the
@@ -232,7 +237,9 @@ Let's take one of these tests as an example to see RSpec's DSL:
 
 ```rb
 it 'outputs the string "Pass this test, please." using the print method' do
-  expect { load 'app.rb' }.to output(a_string_including("Pass this test, please.")).to_stdout
+  expect { load "app.rb" }.to output(
+    a_string_including("Pass this test, please.")
+  ).to_stdout
 end
 ```
 
@@ -367,4 +374,5 @@ to get practice with all of them as you progress through this phase!
 - [Understanding The Differences Between Puts, Print & P](https://www.rubyguides.com/2018/10/puts-vs-print/)
 - [Ruby in Twenty Minutes](https://www.ruby-lang.org/en/documentation/quickstart/)
 - [RSpec Documentation](https://rspec.info/)
+
 # rewrite-array-methods
